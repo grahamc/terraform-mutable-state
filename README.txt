@@ -1,3 +1,11 @@
+This repository uses a terraform variable and output which are
+identical, and a jq statement to modify the input on each run.
+
+See run.sh
+
+Is this totally cursed ...?
+
+
 [nix-shell:~/projects/github.com/grahamc/test]$ ./run.sh 
 ++ jq -rc '. + [now] | .[-2:]'
 ++ terraform output --json mylist
