@@ -3,6 +3,7 @@ let
 in
 pkgs.mkShell {
   buildInputs = [
-    (pkgs.terraform.withPlugins (p: [ p.local ])
-      ];
-    }
+    pkgs.jq
+    (pkgs.terraform.withPlugins (p: [ p.local ]))
+  ];
+}
